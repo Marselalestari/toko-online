@@ -1,0 +1,378 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #b874b8;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(247, 242, 242);
+}
+
+nav .cart button {
+    background-color: #fcf8f8;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 250px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 18px;
+    color: #360b29;
+}
+
+.product button {
+    background-color: #a55498;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #d6a3d2;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.center-text {
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* Mengganti font */
+    font-size: 36px; /* Ukuran font yang lebih besar */
+    color: #d42cd4; /* Warna teks ke kuning keemasan */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan teks agar lebih menarik */
+    font-weight: bold; /* Menebalkan font */
+}
+
+.center-text {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    color: #9c6f9e;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.about-image {
+    width: 30%;
+    /*Gambarakanmengambil40%lebar*/height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.about-description {
+    width: 55%;  /* Deskripsi akan mengambil 55% lebar */
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-description h2 {
+    font-size: 28px;
+    color: #ce4cb8;
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%; /* Memastikan gambar tidak lebih lebar dari elemen pembungkusnya */
+    height: auto; /* Menjaga proporsi gambar tetap */
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the links */
+}
+
+nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav .nav-links a:hover {
+    background-color: #c93f84;
+    color: #fff;
+}
+
+nav .cart button {
+    background-color: #c93f84;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav .cart button:hover {
+    background-color: #a5376b;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav .nav-links a {
+        margin-bottom: 10px;
+    }
+
+    nav .cart {
+        margin-top: 10px;
+    }
+}
+
+/* Make the image responsive */
+.responsive-image {
+    width: 100%;  /* Make the image take up 100% of its container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    max-width: 100%; /* Prevent the image from exceeding its container's width */
+}
+/* Footer Styling */
+footer {
+    background-color: #9a4cb9d2;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+footer .social-links a:hover {
+    background-color: #c93f84;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    footer .social-links {
+        margin-top: 10px;
+    }
+}
+.center-text {
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Menggunakan font Roboto */
+    font-size: 36px;
+    color: #99228f;
+    text-shadow: 2px 2px 5px rgba(85, 18, 55, 0.3);
+    font-weight: bold;
+}
+
+/* Navigation Bar */
+nav {
+    background-color:  #9a4cb9d2;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav .logo {
+    font-size: 24px;
+    color: hsl(0, 10%, 86%);
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+nav .nav-links {
+    display: inline-block;
+}
+
+nav .nav-links a {
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: background-color 0.3s;
+}
+
+nav .nav-links a:hover {
+    background-color: #6e1c8f;
+    border-radius: 5px;
+}
+
+.cart button {
+    padding: 10px 20px;
+    background-color: #38c76f;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart button:hover {
+    background-color: #a5376b;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #c93f84;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #a5376b;
+}
+
+
